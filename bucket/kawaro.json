@@ -1,0 +1,30 @@
+{
+    "version": "0.4.3",
+    "description": "Local file converter with a honeycomb picker, Arabic and English. Files never leave your machine.",
+    "homepage": "https://github.com/M7MMAD-OMAR/kawaro",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/M7MMAD-OMAR/kawaro/releases/download/v0.4.3/kawaro-0.4.3-windows-x64.zip",
+            "hash": "5468e977a821b3591a03338240d4c3d5f60d9b070923a795d6b5e7a65ff072a4",
+            "extract_dir": "kawaro-0.4.3-windows-x64"
+        }
+    },
+    "bin": [
+        "kawaro.exe",
+        "kawarod.exe"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/M7MMAD-OMAR/kawaro/releases/download/v$version/kawaro-$version-windows-x64.zip",
+                "extract_dir": "kawaro-$version-windows-x64",
+                "hash": {
+                    "url": "https://github.com/M7MMAD-OMAR/kawaro/releases/download/v$version/SHA256SUMS",
+                    "regex": "$sha256\\s+$basename"
+                }
+            }
+        }
+    }
+}
